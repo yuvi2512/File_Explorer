@@ -1,0 +1,49 @@
+.App{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.panel{
+  padding:10px;
+  border-bottom: 1px solid #ccc,
+}
+
+.panel input,
+.panel select {
+  margin-right: 10px;
+  padding:5px
+}
+
+.Home{
+  padding: 10px;
+  width:300px;
+  overflow-y: auto;
+}
+
+.container{
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+.file-viewer{
+  flex: 1;
+  padding: 10px;
+  overflow-y: auto;
+  margin-left: 200px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+  
+  .Home {
+    width: 100%;
+  }
+  
+  .file-viewer {
+    width: 100%;
+  }
+}
