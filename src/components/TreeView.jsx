@@ -1,5 +1,5 @@
 import  react,{useState} from 'react';
-import { FaFolder, FaFolderOpen, FaFile, FaTrash, FaPen } from "react-icons/fa";
+import { FaFolder, FaFolderOpen, FaFile, FaTrash } from "react-icons/fa";
 
 const TreeView =({item,setSelectedFile,onDelete })=>{
     const [expanded, setExpanded] = useState(false);
@@ -28,7 +28,6 @@ const TreeView =({item,setSelectedFile,onDelete })=>{
             <FaFile />
         )}
         <span onClick={handleSelect} style={{ cursor: "pointer" }}>{item.name}</span>
-        <FaPen style={{ cursor: "pointer" }} />
         <FaTrash onClick={()=>handleDelete(item?.id)} style={{ cursor: "pointer" }} />
         {expanded && item.Children && item.Children.map((child) => (
             <TreeView key={child.id} item={child} setSelectedFile={setSelectedFile} onDelete={onDelete} />
