@@ -62,18 +62,6 @@ const Panel = ({ fileSystem, setFileSystem }) => {
 };
 
 const styles = {
-  panel: {
-    display: "flex",
-    flexDirection: "column",
-    gap: "10px",
-    maxWidth: "300px",
-    padding: "20px",
-    backgroundColor: "#f9f9f9",
-    borderRadius: "12px",
-    boxShadow: "0 4px 10px rgba(0,0,0,0.1)",
-    fontFamily: "Arial, sans-serif",
-    margin: "20px auto"
-  },
   heading: {
     margin: "0 0 10px",
     fontSize: "18px",
