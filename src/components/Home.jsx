@@ -15,6 +15,7 @@ const Home = ({ fileSystem, setSelectedFile, setFileSystem }) => {
 
   const handleRemoveItem = (id) => {
     setFileSystem(prev=> removeItem(prev,id));
+    setSelectedFile('');
   }
 
 

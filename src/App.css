@@ -1,16 +1,22 @@
 .App{
   height: 100vh;
   display: flex;
+  width:100%;
   flex-direction: column;
 }
 
 .panel{
   padding:10px;
-  border-bottom: 1px solid #ccc,
+  border-bottom: 1px solid #ccc;
+  display : flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
 .panel input,
 .panel select {
+  margin: 10px;
   margin-right: 10px;
   padding:5px
 }
