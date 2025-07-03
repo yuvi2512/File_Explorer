@@ -1,4 +1,4 @@
-import react, { useState } from "react";
+import React, { useState } from "react";
 
 const Panel = ({ fileSystem, setFileSystem }) => {
   const [Id, setId] = useState("");
@@ -37,25 +37,73 @@ const Panel = ({ fileSystem, setFileSystem }) => {
   };
 
   return (
-    <div className="panel">
+    <div style={styles.panel}>
+      <h3 style={styles.heading}>Add File/Folder</h3>
       <input
-        placeholder="Id"
+        style={styles.input}
+        placeholder="Parent Folder ID"
         value={Id}
         onChange={(e) => setId(e.target.value)}
       />
       <input
+        style={styles.input}
         placeholder="Name"
         value={name}
         onChange={(e) => setName(e.target.value)}
       />
-      <select value={type} onChange={e=> setType(e.target.value)}>
+      <select style={styles.select} value={type} onChange={e => setType(e.target.value)}>
+        <option value="" disabled>Select type</option>
         <option value="file">File</option>
-          <option value="folder">Folder</option>
-        </select>
-
-        <button onClick={handleCreate}>Add</button>
+        <option value="folder">Folder</option>
+      </select>
+      <button style={styles.button} onClick={handleCreate}>Add</button>
     </div>
   );
+};
+
+const styles = {
+  panel: {
+    display: "flex",
+    flexDirection: "column",
+    gap: "10px",
+    maxWidth: "300px",
+    padding: "20px",
+    backgroundColor: "#f9f9f9",
+    borderRadius: "12px",
+    boxShadow: "0 4px 10px rgba(0,0,0,0.1)",
+    fontFamily: "Arial, sans-serif",
+    margin: "20px auto"
+  },
+  heading: {
+    margin: "0 0 10px",
+    fontSize: "18px",
+    color: "#333",
+    textAlign: "center"
+  },
+  input: {
+    padding: "10px",
+    fontSize: "14px",
+    borderRadius: "8px",
+    border: "1px solid #ccc",
+    outline: "none"
+  },
+  select: {
+    padding: "10px",
+    fontSize: "14px",
+    borderRadius: "8px",
+    border: "1px solid #ccc",
+    backgroundColor: "#fff"
+  },
+  button: {
+    padding: "10px",
+    fontSize: "14px",
+    borderRadius: "8px",
+    border: "none",
+    backgroundColor: "#4CAF50",
+    color: "#fff",
+    cursor: "pointer",
+    transition: "background-color 0.2s"
+  }
 };
 
 export default Panel;

@@ -1,55 +1,68 @@
-.App{
+.App {
   height: 100vh;
+  width: 100%;
   display: flex;
-  width:100%;
   flex-direction: column;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f6f8;
 }
 
-.panel{
-  padding:10px;
-  border-bottom: 1px solid #ccc;
-  display : flex;
-  align-items: center;
+.panel {
+  padding: 15px 20px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e0e0e0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  align-items: center;
 }
 
 .panel input,
 .panel select {
   margin: 10px;
-  margin-right: 10px;
-  padding:5px
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+  width: 250px;
 }
 
-.Home{
-  padding: 10px;
-  width:300px;
-  overflow-y: auto;
-}
-
-.container{
+.container {
   display: flex;
   flex: 1;
   overflow: hidden;
+  padding: 10px;
+  gap: 20px;
 }
 
-.file-viewer{
-  flex: 1;
-  padding: 10px;
+.home-wrapper {
+  width: 300px;
   overflow-y: auto;
-  margin-left: 200px;
+  background-color: #ffffff;
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.viewer-wrapper {
+  flex: 1;
+  overflow-y: auto;
+  background-color: #ffffff;
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
 }
 
 @media (max-width: 768px) {
   .container {
     flex-direction: column;
   }
-  
-  .Home {
+
+  .home-wrapper {
     width: 100%;
   }
-  
-  .file-viewer {
+
+  .viewer-wrapper {
     width: 100%;
   }
 }
